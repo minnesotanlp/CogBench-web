@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CogBench</title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="static/css/bulma.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+    <link rel="stylesheet" href="static/css/index.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <!-- <section class="hero is-warning">
+        <div class="hero-body">
+          <p class="title">
+            Under Construction
+          </p>
+          <p class="subtitle">
+            Internal preview only
+          </p>
+        </div>
+      </section> -->
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-2 publication-title">
+                CogBench - Cognitive Benchmarking of LLMs
+              </h1>
+              <div class="is-size-5 publication-authors">
+                <!-- Paper authors -->
+                <span class="author-block">
+                  <a href="https://karinjd.github.io/" target="_blank"
+                    >Karin de Langis</a
+                  ><sup>*</sup>,</span
+                >
+                <span class="author-block">
+                  <a target="_blank"
+                    >Jong Inn Park</a
+                  ><sup>*</sup>,</span
+                >
+                <span class="author-block">
+                  <a target="_blank"
+                    >Masha Volkova</a
+                  ><sup>*</sup>,
+                </span>
+
+                <span class="author-block">
+                  <a href="https://bin-hu.com/" target="_blank"
+                    >Bin Hu</a
+                  ><sup>*</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://dykang.github.io/" target="_blank"
+                    >Dongyeop Kang</a
+                  ><sup>*</sup>,
+                </span>
+
+                <span class="author-block">
+                  <a target="_blank"
+                    > Andreas Schramm</a
+                  ><sup>+</sup>
+                </span>
+
+
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <a class="subtitle" style="color: black !important;" href="https://minnesotanlp.github.io/">Minnesota NLP Lab, University of Minnesota <img src="static/logos/mnnlp.png" style="height: 1em; margin-inline: 5px;"></a>
+                <span class="eql-cntrb"
+                  ><small
+                    ><br /><sup>*</sup>Main Developers <sup>+</sup>Contributors</small
+                  ></span
+                >
+              </div>
+
+              
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSdAyv3ELW09sRa1L_xQrDXS9q1aeWtntdjAFpeH4SXJoe6FVQ/viewform"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded is-dark is-outlined"
+                    >
+
+                      <span>Collaboration Interest Form</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                        <a
+                          href="https://cogbench-prd.ngrok.dev"
+                          target="_blank"
+                          class="external-link button is-normal is-rounded is-dark is-outlined"
+                        >
+                  
+                  <span>Data Collection Web Interface</span>
+                  </a>
+                  </span>
+
+
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- Takeaway start -->
+    <span id="takeaway">
+      <!-- The content in this section will be replaced with the content in takeaway-mobile.html if the browser's width is less than 1024px. -->
+      <section class="section hero is-small is-light">
+        <div class="container is-max-desktop">
+          <div class="content">
+            <h2 class="title is-3 ">Objective</h2>
+
+            <p>The state of the art in LLMs has advanced rapidly, demanding new suites of benchmarks to assess emergent capabilities. For example, contemporary work explores benchmarking LLMs' Emotional Intelligence (EQ) 
+              and decision making (CogBench). We want to develop a broad spectrum cognitive benchmark that evaluates LLMs across areas of cognition that are well-studied in humans - e.g. selective attention, working memory, 
+              psycholinguistics. Our aim is to understand the ways in which LLM cognition differs from humans, as well as the ways in which it is similar. 
+                            
+            </p>
+
+            <p><b> Project Goals: </b></p>
+
+            <ol>
+  
+
+              <li> Create a detailed cognitive inventory to benchmark LLM capabilities</li>
+              <li> Utilize domain experts to probe cognition in LLMs: Cognitive Science, Psychology, Linguistics
+                </li>
+
+              <li>Facilitate deeper understanding of LLM cognition compared to human cognition</li>
+
+              <li> Build foundation for understanding 'internals' of LLM cognition - more predictive power, interpretability for LLM behavior
+                </li>
+
+
+              </ol>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </span>
+    <!-- Takeaway end -->
+        
+    <!-- Research question start -->
+    <section class="section hero is-small ">
+      <div class="container is-max-desktop">
+        <div class="content">
+          <h2 class="title is-3">Join our project!</h2>
+          <div class="level-set has-text-justified">
+
+            <p> Please fill out the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdAyv3ELW09sRa1L_xQrDXS9q1aeWtntdjAFpeH4SXJoe6FVQ/viewform" target="_blank" class="external-link is-normal"><span> collaboration interest form</span></a> if you are interested in contributing to our project.  </p>
+
+            <p> We are looking for collaborators willing to contribute data, provide feedback on our data annotation tool, and/or co-author our paper. </p>
+            
+            
+
+          </div>
+        </div>
+    </section>
+    <!-- Research question end -->
+
+    <!-- Data type start -->
+    <section class="section hero is-small is-light">
+      <div class="container is-max-desktop">
+
+            <div class="content">
+              <h2 class="title is-3 ">Demo Video</h2>
+
+
+              <video poster="" id="tree" autoplay controls muted loop height="100%">
+                <!-- Your video here -->
+                <source src="static/videos/cogbench-demo-final.mov"
+                type="video/mp4">
+              </video>
+
+              <p class="subtitle has-text-centered">
+                View video for a demo of the data collection web interface.
+              </p>
+
+              </div>
+            </div>
+
+      </div>
+    </section>
+    <!-- Data type end -->
+
+    <!-- Research Contributions start -->
+    <section class="section hero is-small">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <div class="content">
+              <h2 class="title is-3">Example Output Data</h2>
+              <div class="level-set has-text-justified">
+
+                <img src="static/images/Prompting.png" style="margin-inline: 5px;">
+
+              </div>
+            </div>
+          </div>
+    </section>
+    <!-- Research Contributions end -->
+
+    <!-- Takeaway start -->
+    <span id="takeaway">
+      <!-- The content in this section will be replaced with the content in takeaway-mobile.html if the browser's width is less than 1024px. -->
+      <section class="section hero is-small is-light">
+        <div class="container is-max-desktop">
+          <div class="content">
+            <h2 class="title is-3">How will data be used?</h2>
+
+            <p><b>Curated Dataset Benchmark (V0)</b></p>
+            <ul>
+            <li>~100-200 input/outputs categorized by cognitive process</li>
+            <li>Written by verified experts. Contributors have advanced education in relevant field (professors, post docs, PhD candidates)</li>
+            <li>Strong theory, reliable</li>
+            </ul>
+
+          <p><b>Open Dataset Benchmark (V1)</b></p>
+          <ul>
+          <li>~500+ input/output</li>
+          <li>Data is provided by anyone*</li>
+          <li>Adversarial setup is emphasized</li>
+          <li>Can be bootstrapped from curated samples or just focused on reasoning</li>
+          </ul>
+
+
+          <p><b>LLM Evaluation </b></p>
+          <ul>
+          <li>Compare LLM and human performance</li>
+          <li>Does model type, size affect different aspects of cognition?</li>
+          <li>Do different architectures have different cognitive capabilities?</li>
+          <li> Interpretability/explainability analysis</li>
+          </ul>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </span>
+    <!-- Takeaway end -->
+
+    <!-- Limitations start -->
+    <section class="section hero is-small" style="text-align: left;">
+      <div class="container is-max-desktop">
+
+  
+            <div class="content">
+              
+              <div class=" custom-text-left">
+                <h2 class="title is-3">Primary Contacts</h2>
+                <p> Reach out if you have any questions, comments, or concerns!</p>
+                <p> Karin de Langis - <a href=mailto:dento019@umn.edu>dento019@umn.edu</a> </p>
+                <p> Dr. Dongyeop Kang - <a href=mailto:dongyeop@umn.edu>dongyeop@umn.edu</a></p>
+                
+
+        
+          </div>
+          </div>
+    </section>
+    <!-- Limitations end -->
+
+
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This page was built using the
+                <a
+                  href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                  target="_blank"
+                  >Academic Project Page Template</a
+                >
+                which was adopted from the <a
+                  href="https://nerfies.github.io"
+                  target="_blank"
+                  >Nerfies</a
+                > project page.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <script>
+      function loadHtmlWithScripts(targetElemId, filePath) {
+          return fetch(filePath)
+              .then((response) => response.text())
+              .then((data) => {
+                  const targetElem = document.getElementById(targetElemId);
+                  targetElem.innerHTML = data;
+
+                  const scripts = targetElem.querySelectorAll("script");
+                  scripts.forEach((script) => {
+                      const newScript = document.createElement("script");
+                      if (script.src) {
+                          newScript.src = script.src;
+                      } else {
+                          newScript.textContent = script.textContent;
+                      }
+                      document.body.appendChild(newScript);
+                      newScript.remove();
+                  });
+              });
+      }
+      function loadTakeaway() {
+          if (window.innerWidth < 1024) {
+              loadHtmlWithScripts('takeaway', 'takeaway-mobile.html');
+          }
+      }
+
+      loadTakeaway();
+
+    </script>
+
+    <!-- Statcounter tracking code -->
+
+    <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+  </body>
+</html>
