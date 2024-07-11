@@ -25,6 +25,7 @@
     <script src="static/js/bulma-slider.min.js"></script>
     <script src="static/js/index.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
   </head>
   <body>
     <!-- <section class="hero is-warning">
@@ -45,8 +46,13 @@
               <h1 class="title is-2 publication-title">
                 CogBench - Cognitive Benchmarking of LLMs
               </h1>
+
+
+                
+
+
               <div class="is-size-5 publication-authors">
-                <!-- Paper authors -->
+                <!-- Paper authors 
                 <span class="author-block">
                   <a href="https://karinjd.github.io/" target="_blank"
                     >Karin de Langis</a
@@ -83,13 +89,18 @@
 
               </div>
 
+            -->
+
               <div class="is-size-5 publication-authors">
                 <a class="subtitle" style="color: black !important;" href="https://minnesotanlp.github.io/">Minnesota NLP Lab, University of Minnesota <img src="static/logos/mnnlp.png" style="height: 1em; margin-inline: 5px;"></a>
+                
+                
                 <span class="eql-cntrb"
-                  ><small
-                    ><br /><sup>*</sup>Main Developers <sup>+</sup>Contributors</small
-                  ></span
-                >
+                  >
+
+                  <!--
+                  <small><br /><sup>*</sup>Main Developers <sup>+</sup>Contributors</small
+                  ></span > -->
               </div>
 
               
@@ -116,9 +127,21 @@
                           class="external-link button is-normal is-rounded is-dark is-outlined"
                         >
                   
-                  <span>Data Collection Web Interface</span>
+                  <span>Data Collection Tool</span>
                   </a>
                   </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                      <a
+                       href="static/pdfs/instructions.pdf"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded is-dark is-outlined"
+                      >
+                                
+                      <span>Instructions for Collaborators</span>
+                      </a>
+                      </span>
 
 
                 </div>
@@ -132,13 +155,31 @@
     </section>
 
 
+        <!-- Research question start -->
+        <section class="section hero is-small left-aligned is-light" style="text-align: left;">
+          <div class="container is-max-desktop" style="text-align: left;">
+            <div class="content" style="text-align: left;">
+
+              <h2 class="title is-3"> Project Team Members</h2>
+              
+
+              <p> <b>Project Lead: </b> <a href="https://karinjd.github.io/" target="_blank">Karin de Langis</a></li> </p>
+              <p> <b>Project Developers: </b><a target="_blank">Jong Inn Park</a>, <a target="_blank">Masha Volkova</a> </p>
+              <p> <b>Contributors: </b> <a target="_blank"> Andreas Schramm</a> </p>
+              <p> <b>Principal Investigator: </b><a href="https://dykang.github.io/" target="_blank">Dongyeop Kang</a> </p>
+                
+    
+
+            </div>
+        </section>
+        <!-- Research question end -->
 
 
 
     <!-- Takeaway start -->
     <span id="takeaway">
       <!-- The content in this section will be replaced with the content in takeaway-mobile.html if the browser's width is less than 1024px. -->
-      <section class="section hero is-small is-light">
+      <section class="section hero is-small ">
         <div class="container is-max-desktop">
           <div class="content">
             <h2 class="title is-3 ">Objective</h2>
@@ -178,7 +219,7 @@
     <!-- Takeaway end -->
         
     <!-- Research question start -->
-    <section class="section hero is-small ">
+    <section class="section hero is-small is-light">
       <div class="container is-max-desktop">
         <div class="content">
           <h2 class="title is-3">Join our project!</h2>
@@ -196,7 +237,7 @@
     <!-- Research question end -->
 
     <!-- Data type start -->
-    <section class="section hero is-small is-light">
+    <section class="section hero is-small ">
       <div class="container is-max-desktop">
 
             <div class="content">
@@ -210,8 +251,10 @@
               </video>
 
               <p class="subtitle has-text-centered">
-                View video for a demo of the data collection web interface.
+                View this video for a demo of the data collection web interface. We will provide the login credentials once you fill out our interest form!
               </p>
+
+              <p><a href="static/videos/cogbench-demo-final.mov" target="_blank" class="external-link is-normal"><span>  <b>Link to Video</b></span></a> </p>
 
               </div>
             </div>
@@ -220,8 +263,11 @@
     </section>
     <!-- Data type end -->
 
-    <!-- Research Contributions start -->
-    <section class="section hero is-small">
+
+
+
+    <!-- Research Contributions start 
+    <section class="section hero is-small is-light">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column is-full">
@@ -235,12 +281,57 @@
             </div>
           </div>
     </section>
-    <!-- Research Contributions end -->
+     Research Contributions end -->
+
+
+<!-- Image carousel -->
+<section class="section hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <div class="content">
+            <h2 class="title is-3">Example Output Data</h2>
+
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/prompt_1.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/prompt_2.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/prompt_3.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+
+       </h2>
+     </div>
+
+     </div>
+     </div>
+     </div>
+
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
 
     <!-- Takeaway start -->
     <span id="takeaway">
       <!-- The content in this section will be replaced with the content in takeaway-mobile.html if the browser's width is less than 1024px. -->
-      <section class="section hero is-small is-light">
+      <section class="section hero is-small">
         <div class="container is-max-desktop">
           <div class="content">
             <h2 class="title is-3">How will data be used?</h2>
@@ -281,8 +372,34 @@
     </span>
     <!-- Takeaway end -->
 
+
+        <!-- Limitations start -->
+        <section class="section hero is-small is-light" style="text-align: left;">
+          <div class="container is-max-desktop">
+    
+      
+                <div class="content">
+                  
+                  <div class=" custom-text-left">
+                    <h2 class="title is-3">Instructions for Collaborators</h2>
+
+
+                    <embed src="static/pdfs/instructions.pdf" width="700" height="375" type="application/pdf">
+                    
+
+                      <p><a href="static/pdfs/instructions.pdf" target="_blank" class="external-link is-normal"><span>  <b>Link to Instructions</b></span></a> </p>
+
+    
+            
+              </div>
+              </div>
+        </section>
+        <!-- Limitations end -->
+
+
+
     <!-- Limitations start -->
-    <section class="section hero is-small" style="text-align: left;">
+    <section class="section hero is-small " style="text-align: left;">
       <div class="container is-max-desktop">
 
   
