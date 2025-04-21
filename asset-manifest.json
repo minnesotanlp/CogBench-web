@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/CogBench-web/static/js/main.d81ddf44.js",
+    "index.html": "/CogBench-web/index.html",
+    "main.d81ddf44.js.map": "/CogBench-web/static/js/main.d81ddf44.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.d81ddf44.js"
+  ]
+}
