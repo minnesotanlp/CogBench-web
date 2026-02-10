@@ -1,5 +1,6 @@
 body {
   font-family: 'Noto Sans', sans-serif;
+  background: #fafbfc;
 }
 
 :link { color: #0000EE; }
@@ -20,6 +21,17 @@ body {
   font-variant: small-caps;
 }
 
+/* Enhanced button styling */
+.button.is-white:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.button.is-white {
+  transition: all 0.3s ease;
+}
 
 .teaser .hero-body {
   padding-top: 0;
@@ -30,13 +42,12 @@ body {
   font-family: 'Google Sans', sans-serif;
 }
 
-
 .publication-title {
+  font-family: 'Google Sans', sans-serif;
 }
 
 .publication-banner {
   max-height: parent;
-
 }
 
 .publication-banner video {
@@ -48,6 +59,7 @@ body {
 }
 
 .publication-header .hero-body {
+}
 }
 
 .publication-title {
@@ -138,6 +150,94 @@ body {
 
 .custom-text-left{
   text-align: left !important;
+}
+
+/* Enhanced card/box styling */
+.box {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Hero section enhancements */
+.hero.is-large {
+  position: relative;
+}
+
+/* Tag styling */
+.tag {
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+}
+
+/* Section spacing */
+.section {
+  padding: 4rem 1.5rem;
+}
+
+.section.hero.is-small {
+  padding: 3rem 1.5rem;
+}
+
+/* Link styling enhancements */
+a {
+  transition: color 0.2s ease;
+}
+
+/* Carousel improvements */
+.carousel {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.carousel .item {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Title styling */
+.title {
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.subtitle {
+  color: #555;
+}
+
+/* Button group spacing */
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Responsive improvements */
+@media screen and (max-width: 768px) {
+  .publication-links {
+    flex-direction: column;
+  }
+  
+  .publication-links .link-block {
+    width: 100%;
+  }
+  
+  .publication-links .link-block a {
+    width: 100%;
+  }
+  
+  .box {
+    border-left: none !important;
+    border-top: 4px solid !important;
+  }
 }
 
 
