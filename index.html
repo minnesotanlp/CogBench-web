@@ -9,19 +9,70 @@
     />
 
     <link rel="stylesheet" href="static/css/bulma.min.css" />
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css" />
     <link rel="stylesheet" href="static/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
     />
-    <link rel="stylesheet" href="static/css/index.css" />
+    <link rel=\"stylesheet\" href=\"static/css/index.css\" />
+
+    <style>
+      /* Mobile Responsiveness - Team Section */
+      @media (max-width: 768px) {
+        .authors-wrapper {
+          gap: 1rem !important;
+        }
+      }
+      
+      @media (max-width: 640px) {
+        .author-container {
+          width: clamp(75px, 22vw, 95px) !important;
+          min-width: 75px !important;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .authors-wrapper {
+          gap: 0.75rem !important;
+        }
+        
+        .author-container {
+          width: clamp(70px, 20vw, 85px) !important;
+          min-width: 70px !important;
+        }
+      }
+      
+      /* Publication cards mobile optimization */
+      @media (max-width: 640px) {
+        .publication-item {
+          margin-bottom: 1.5rem !important;
+        }
+      }
+      
+      /* Code blocks mobile optimization */
+      @media (max-width: 768px) {
+        pre {
+          font-size: 0.85rem !important;
+          overflow-x: auto !important;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        pre {
+          font-size: 0.75rem !important;
+          overflow-x: auto !important;
+          padding: 0.75rem !important;
+        }
+      }
+    </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
     <script defer src="static/js/fontawesome.all.min.js"></script>
-    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="static/js/bulma-slider.min.js"></script>
     <script src="static/js/index.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,38 +101,39 @@
         </svg>
       </div>
       
-      <div class="hero-body" style="position: relative; z-index: 1; padding: 2rem 1.5rem;">
+      <div class="hero-body" style="position: relative; z-index: 1; padding: 1.5rem 1rem;">
         <div class="container is-max-desktop">
           <div class="columns is-centered">
             <div class="column has-text-centered">
-              <div class="cogbench-badge" style="display: inline-block; background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; margin-bottom: 12px; color: white; font-size: 0.9rem; font-weight: 600;">
-                🧠 Cognitive Science × AI Research
+              <div class="cogbench-badge" style="display: inline-block; background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 20px; margin-bottom: 10px; color: white; font-size: 0.75rem; font-weight: 600;">
+                🧠 Cognitive Science × AI 
               </div>
               
-              <h1 class="title is-1 publication-title" style="color: white; font-weight: 800; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); margin-bottom: 0.5rem;">
+              <h1 class="title is-1 publication-title" style="color: white; font-weight: 800; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); margin-bottom: 0.55rem; font-size: clamp(1.75rem, 8vw, 3.5rem);">
                 CogBench
               </h1>
-              <h2 class="subtitle is-3 publication-title" style="color: rgba(255,255,255,0.95); text-shadow: 1px 1px 2px rgba(0,0,0,0.2); margin-bottom: 1rem;">
+              <h2 class="subtitle is-3 publication-title" style="color: rgba(255,255,255,0.95); text-shadow: 1px 1px 2px rgba(0,0,0,0.2); margin-bottom: 0.75rem; font-size: clamp(1rem, 5vw, 2rem);">
                 Do Language Models Think Like Humans?
               </h2>
 
-              <p class="subtitle is-5" style="color: rgba(255,255,255,0.9); margin-top: 1rem; margin-bottom: 1.5rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+              <p class="subtitle is-5" style="color: rgba(255,255,255,0.9); margin-top: 0.75rem; margin-bottom: 1rem; max-width: 700px; margin-left: auto; margin-right: auto; font-size: clamp(0.85rem, 3vw, 1rem); line-height: 1.5;">
                 A comprehensive research initiative bridging cognitive science and artificial intelligence. We investigate whether large language models exhibit human-like cognitive abilities through empirical studies in memory, reasoning, and comprehension.
               </p>
 
-              <div class="column has-text-centered" style="margin-top: 1.5rem;">
-                <div class="publication-links">
+              <div class="column has-text-centered" style="margin-top: 1rem; padding: 0;">
+                <div class="publication-links" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem;">
                   <!-- Collaboration link -->
                   <span class="link-block">
                     <a
                       href="https://docs.google.com/forms/d/e/1FAIpQLSdAyv3ELW09sRa1L_xQrDXS9q1aeWtntdjAFpeH4SXJoe6FVQ/viewform"
                       target="_blank"
-                      class="external-link button is-normal is-rounded is-white"
+                      class="external-link button is-small is-rounded is-white"
+                      style="font-size: 0.85rem; white-space: nowrap;"
                     >
-                      <span class="icon">
+                      <span class="icon is-small">
                         <i class="fas fa-handshake"></i>
                       </span>
-                      <span>Collaboration Interest</span>
+                      <span>Collaborate</span>
                     </a>
                   </span>
 
@@ -90,12 +142,13 @@
                     <a
                       href="https://cogbench-prd.ngrok.dev"
                       target="_blank"
-                      class="external-link button is-normal is-rounded is-white"
+                      class="external-link button is-small is-rounded is-white"
+                      style="font-size: 0.85rem; white-space: nowrap;"
                     >
-                      <span class="icon">
+                      <span class="icon is-small">
                         <i class="fas fa-database"></i>
                       </span>
-                      <span>Data Collection Tool</span>
+                      <span>Tool</span>
                     </a>
                   </span>
 
@@ -104,12 +157,13 @@
                     <a
                       href="static/pdfs/instructions.pdf"
                       target="_blank"
-                      class="external-link button is-normal is-rounded is-white"
+                      class="external-link button is-small is-rounded is-white"
+                      style="font-size: 0.85rem; white-space: nowrap;"
                     >
-                      <span class="icon">
+                      <span class="icon is-small">
                         <i class="fas fa-book"></i>
                       </span>
-                      <span>Contributor Guide</span>
+                      <span>Guide</span>
                     </a>
                   </span>
                 </div>
@@ -125,64 +179,64 @@
             <div style="margin-bottom: 1rem;">
               <h3 class="title is-5" style="color: white; margin-bottom: 1.5rem; text-align: center;">Core Research Team</h3>
               <div class="is-size-5 publication-authors">
-                <div class="authors-wrapper" style="display: flex; flex-direction: row; justify-content: space-evenly; flex-wrap: wrap; gap: 1.5rem;">
+                <div class="authors-wrapper" style="display: flex; flex-direction: row; justify-content: center; flex-wrap: wrap; gap: clamp(0.75rem, 2vw, 1.5rem);">
                   
                   <!-- Karin de Langis -->
-                  <div class="author-container" style="width: 12%; min-width: 100px; align-self: flex-start;">
+                  <div class="author-container" style="width: 90px; flex-shrink: 0; align-self: flex-start;">
                     <div class="author-image" style="position: relative; width: 100%; padding-bottom: 100%; margin-bottom: 5px;">
                       <img src="https://karinjd.github.io/images/profile.png" alt="Karin de Langis" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border-radius: 50%; object-fit: cover;">
                     </div>
-                    <p style="margin-bottom: 0px; font-size: 13px; text-align: center; color: white;">
+                    <p style="margin-bottom: 0px; font-size: 11px; text-align: center; color: white;">
                       <a target="_blank" href="https://karinjd.github.io/" style="color: white; text-decoration: underline;">Karin de Langis</a><sup>*</sup>
                     </p>
-                    <p style="margin-bottom: 3px; font-size: 10px; text-align: center; color: rgba(255,255,255,0.9);">PhD Candidate, CS</p>
-                    <p style="margin-bottom: 0px; font-size: 9px; text-align: center; color: rgba(255,255,255,0.7);">University of Minnesota</p>
+                    <p style="margin-bottom: 3px; font-size: 8px; text-align: center; color: rgba(255,255,255,0.9);">PhD Cand.</p>
+                    <p style="margin-bottom: 0px; font-size: 7px; text-align: center; color: rgba(255,255,255,0.7);">UMN</p>
                   </div>
 
                   <!-- Khanh Chi Le -->
-                  <div class="author-container" style="width: 12%; min-width: 100px; align-self: flex-start;">
+                  <div class="author-container" style="width: 90px; flex-shrink: 0; align-self: flex-start;">
                     <div class="author-image" style="position: relative; width: 100%; padding-bottom: 100%; margin-bottom: 5px;">
                       <img src="https://minnesotanlp.github.io/img/members/ChiLe.jpg" alt="Khanh Chi Le" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border-radius: 50%; object-fit: cover;">
                     </div>
-                    <p style="margin-bottom: 0px; font-size: 13px; text-align: center; color: white;">
+                    <p style="margin-bottom: 0px; font-size: 11px; text-align: center; color: white;">
                       <a target="_blank" href="https://chile2706.github.io/" style="color: white; text-decoration: underline;">Khanh Chi Le</a>
                     </p>
-                    <p style="margin-bottom: 3px; font-size: 10px; text-align: center; color: rgba(255,255,255,0.9);">Undergraduate</p>
-                    <p style="margin-bottom: 0px; font-size: 9px; text-align: center; color: rgba(255,255,255,0.7);">University of Minnesota</p>
+                    <p style="margin-bottom: 3px; font-size: 8px; text-align: center; color: rgba(255,255,255,0.9);">UG</p>
+                    <p style="margin-bottom: 0px; font-size: 7px; text-align: center; color: rgba(255,255,255,0.7);">UMN</p>
                   </div>
 
                   <!-- Jong Inn Park -->
-                  <div class="author-container" style="width: 12%; min-width: 100px; align-self: flex-start;">
+                  <div class="author-container" style="width: 90px; flex-shrink: 0; align-self: flex-start;">
                     <div class="author-image" style="position: relative; width: 100%; padding-bottom: 100%; margin-bottom: 5px;">
                       <img src="https://jong-inn.github.io/assets/images/baseball.JPG" alt="Jong Inn Park" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border-radius: 50%; object-fit: cover;">
                     </div>
-                    <p style="margin-bottom: 0px; font-size: 13px; text-align: center; color: white;">
+                    <p style="margin-bottom: 0px; font-size: 11px; text-align: center; color: white;">
                       <a target="_blank" href="https://jong-inn.github.io/" style="color: white; text-decoration: underline;">Jong Inn Park</a>
                     </p>
-                    <p style="margin-bottom: 3px; font-size: 10px; text-align: center; color: rgba(255,255,255,0.9);">Engineer</p>
-                    <p style="margin-bottom: 0px; font-size: 9px; text-align: center; color: rgba(255,255,255,0.7);">University of Minnesota</p>
+                    <p style="margin-bottom: 3px; font-size: 8px; text-align: center; color: rgba(255,255,255,0.9);">Engineer</p>
+                    <p style="margin-bottom: 0px; font-size: 7px; text-align: center; color: rgba(255,255,255,0.7);">UMN</p>
                   </div>
 
                   <!-- Bin Hu -->
-                  <div class="author-container" style="width: 12%; min-width: 100px; align-self: flex-start;">
+                  <div class="author-container" style="width: 90px; flex-shrink: 0; align-self: flex-start;">
                     <div class="author-image" style="position: relative; width: 100%; padding-bottom: 100%; margin-bottom: 5px; background: rgba(255,255,255,0.3); border-radius: 50%;"></div>
-                    <p style="margin-bottom: 0px; font-size: 13px; text-align: center; color: white;">
+                    <p style="margin-bottom: 0px; font-size: 11px; text-align: center; color: white;">
                       <a target="_blank" href="https://bin-hu.com/" style="color: white; text-decoration: underline;">Bin Hu</a>
                     </p>
-                    <p style="margin-bottom: 3px; font-size: 10px; text-align: center; color: rgba(255,255,255,0.9);">Undergraduate</p>
-                    <p style="margin-bottom: 0px; font-size: 9px; text-align: center; color: rgba(255,255,255,0.7);">University of Minnesota</p>
+                    <p style="margin-bottom: 3px; font-size: 8px; text-align: center; color: rgba(255,255,255,0.9);">UG</p>
+                    <p style="margin-bottom: 0px; font-size: 7px; text-align: center; color: rgba(255,255,255,0.7);">UMN</p>
                   </div>
 
                   <!-- Dongyeop Kang -->
-                  <div class="author-container" style="width: 12%; min-width: 100px; align-self: flex-start;">
+                  <div class="author-container" style="width: 90px; flex-shrink: 0; align-self: flex-start;">
                     <div class="author-image" style="position: relative; width: 100%; padding-bottom: 100%; margin-bottom: 5px;">
                       <img src="https://dykang.github.io/img/dykang2.jpg" alt="Dongyeop Kang" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border-radius: 50%; object-fit: cover;">
                     </div>
-                    <p style="margin-bottom: 0px; font-size: 13px; text-align: center; color: white;">
+                    <p style="margin-bottom: 0px; font-size: 11px; text-align: center; color: white;">
                       <a target="_blank" href="https://dykang.github.io/" style="color: white; text-decoration: underline;">Dongyeop Kang</a><sup>+</sup>
                     </p>
-                    <p style="margin-bottom: 3px; font-size: 10px; text-align: center; color: rgba(255,255,255,0.9);">Asst. Prof., CS&E</p>
-                    <p style="margin-bottom: 0px; font-size: 9px; text-align: center; color: rgba(255,255,255,0.7);">University of Minnesota</p>
+                    <p style="margin-bottom: 3px; font-size: 8px; text-align: center; color: rgba(255,255,255,0.9);">Prof.</p>
+                    <p style="margin-bottom: 0px; font-size: 7px; text-align: center; color: rgba(255,255,255,0.7);">UMN</p>
                   </div>
 
                 </div>
@@ -195,66 +249,66 @@
             <div>
               <h3 class="title is-5" style="color: white; margin-bottom: 1.5rem; text-align: center;">Interdisciplinary Collaborators</h3>
               <div class="is-size-5 publication-authors">
-                <div class="authors-wrapper" style="display: flex; flex-direction: row; justify-content: space-evenly; flex-wrap: wrap; gap: 1.5rem;">
+                <div class="authors-wrapper" style="display: flex; flex-direction: row; justify-content: center; flex-wrap: wrap; gap: clamp(0.75rem, 2vw, 1.5rem);">
                   
                   <!-- Püren Öncel -->
-                  <div class="author-container" style="width: 12%; min-width: 100px; align-self: flex-start;">
+                  <div class="author-container" style="width: 90px; flex-shrink: 0; align-self: flex-start;">
                     <div class="author-image" style="position: relative; width: 100%; padding-bottom: 100%; margin-bottom: 5px;">
                       <img src="https://scholar.googleusercontent.com/citations?view_op=view_photo&user=00MgfxoAAAAJ&citpid=1" alt="Püren Öncel" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border-radius: 50%; object-fit: cover;">
                     </div>
-                    <p style="margin-bottom: 0px; font-size: 13px; text-align: center; color: white;">
+                    <p style="margin-bottom: 0px; font-size: 11px; text-align: center; color: white;">
                       <a target="_blank" href="https://scholar.google.com/citations?user=00MgfxoAAAAJ&hl=en" style="color: white; text-decoration: underline;">Püren Öncel</a>
                     </p>
-                    <p style="margin-bottom: 3px; font-size: 10px; text-align: center; color: rgba(255,255,255,0.9);">Postdoc, CogSci</p>
-                    <p style="margin-bottom: 0px; font-size: 9px; text-align: center; color: rgba(255,255,255,0.7);">University of Valencia</p>
+                    <p style="margin-bottom: 3px; font-size: 8px; text-align: center; color: rgba(255,255,255,0.9);">Postdoc</p>
+                    <p style="margin-bottom: 0px; font-size: 7px; text-align: center; color: rgba(255,255,255,0.7);">U. Valencia</p>
                   </div>
 
                   <!-- Andreas Schramm -->
-                  <div class="author-container" style="width: 12%; min-width: 100px; align-self: flex-start;">
+                  <div class="author-container" style="width: 90px; flex-shrink: 0; align-self: flex-start;">
                     <div class="author-image" style="position: relative; width: 100%; padding-bottom: 100%; margin-bottom: 5px;">
                       <img src="https://scholar.googleusercontent.com/citations?view_op=view_photo&user=RUKESgsAAAAJ&citpid=1" alt="Andreas Schramm" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border-radius: 50%; object-fit: cover;">
                     </div>
-                    <p style="margin-bottom: 0px; font-size: 13px; text-align: center; color: white;">
+                    <p style="margin-bottom: 0px; font-size: 11px; text-align: center; color: white;">
                       <a target="_blank" href="https://www.researchgate.net/profile/Andreas-Schramm-3" style="color: white; text-decoration: underline;">Andreas Schramm</a>
                     </p>
-                    <p style="margin-bottom: 3px; font-size: 10px; text-align: center; color: rgba(255,255,255,0.9);">Prof. Emeritus</p>
-                    <p style="margin-bottom: 0px; font-size: 9px; text-align: center; color: rgba(255,255,255,0.7);">Hamline University</p>
+                    <p style="margin-bottom: 3px; font-size: 8px; text-align: center; color: rgba(255,255,255,0.9);">Prof. Emr.</p>
+                    <p style="margin-bottom: 0px; font-size: 7px; text-align: center; color: rgba(255,255,255,0.7);">Hamline</p>
                   </div>
 
                   <!-- Andrew Elfenbein -->
-                  <div class="author-container" style="width: 12%; min-width: 100px; align-self: flex-start;">
+                  <div class="author-container" style="width: 90px; flex-shrink: 0; align-self: flex-start;">
                     <div class="author-image" style="position: relative; width: 100%; padding-bottom: 100%; margin-bottom: 5px;">
                       <img src="https://storage.theconversation.com/on326pvboqrwdwzqhr0a9e38h7zp" alt="Andrew Elfenbein" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border-radius: 50%; object-fit: cover;">
                     </div>
-                    <p style="margin-bottom: 0px; font-size: 13px; text-align: center; color: white;">
+                    <p style="margin-bottom: 0px; font-size: 11px; text-align: center; color: white;">
                       <a target="_blank" href="https://cla.umn.edu/about/directory/profile/elfen001" style="color: white; text-decoration: underline;">Andrew Elfenbein</a>
                     </p>
-                    <p style="margin-bottom: 3px; font-size: 10px; text-align: center; color: rgba(255,255,255,0.9);">Assoc. Prof., Eng</p>
-                    <p style="margin-bottom: 0px; font-size: 9px; text-align: center; color: rgba(255,255,255,0.7);">University of Minnesota</p>
+                    <p style="margin-bottom: 3px; font-size: 8px; text-align: center; color: rgba(255,255,255,0.9);">Assoc. Prof.</p>
+                    <p style="margin-bottom: 0px; font-size: 7px; text-align: center; color: rgba(255,255,255,0.7);">UMN</p>
                   </div>
 
                   <!-- Laura K. Allen -->
-                  <div class="author-container" style="width: 12%; min-width: 100px; align-self: flex-start;">
+                  <div class="author-container" style="width: 90px; flex-shrink: 0; align-self: flex-start;">
                     <div class="author-image" style="position: relative; width: 100%; padding-bottom: 100%; margin-bottom: 5px;">
                       <img src="https://edpsych.umn.edu/sites/edpsych/files/styles/x_small_portrait/public/AllenL_CEHD-2022.jpg?h=69189783&itok=W2YWtVVl" alt="Laura K. Allen" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border-radius: 50%; object-fit: cover;">
                     </div>
-                    <p style="margin-bottom: 0px; font-size: 13px; text-align: center; color: white;">
+                    <p style="margin-bottom: 0px; font-size: 11px; text-align: center; color: white;">
                       <a target="_blank" href="https://edpsych.umn.edu/laura-allen" style="color: white; text-decoration: underline;">Laura K. Allen</a>
                     </p>
-                    <p style="margin-bottom: 3px; font-size: 10px; text-align: center; color: rgba(255,255,255,0.9);">Assoc. Prof., EdPsy</p>
-                    <p style="margin-bottom: 0px; font-size: 9px; text-align: center; color: rgba(255,255,255,0.7);">University of Minnesota</p>
+                    <p style="margin-bottom: 3px; font-size: 8px; text-align: center; color: rgba(255,255,255,0.9);">Assoc. Prof.</p>
+                    <p style="margin-bottom: 0px; font-size: 7px; text-align: center; color: rgba(255,255,255,0.7);">UMN</p>
                   </div>
 
                   <!-- Mike Mensink -->
-                  <div class="author-container" style="width: 12%; min-width: 100px; align-self: flex-start;">
+                  <div class="author-container" style="width: 90px; flex-shrink: 0; align-self: flex-start;">
                     <div class="author-image" style="position: relative; width: 100%; padding-bottom: 100%; margin-bottom: 5px;">
                       <img src="https://www.uwstout.edu/sites/default/files/styles/profile/public/2020-09/michael_mensink.jpg" alt="Mike Mensink" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border-radius: 50%; object-fit: cover;">
                     </div>
-                    <p style="margin-bottom: 0px; font-size: 13px; text-align: center; color: white;">
+                    <p style="margin-bottom: 0px; font-size: 11px; text-align: center; color: white;">
                       <a target="_blank" href="https://sites.google.com/site/michaelmensink/" style="color: white; text-decoration: underline;">Mike Mensink</a>
                     </p>
-                    <p style="margin-bottom: 3px; font-size: 10px; text-align: center; color: rgba(255,255,255,0.9);">Researcher, Psych</p>
-                    <p style="margin-bottom: 0px; font-size: 9px; text-align: center; color: rgba(255,255,255,0.7);">UW-Stout</p>
+                    <p style="margin-bottom: 3px; font-size: 8px; text-align: center; color: rgba(255,255,255,0.9);">Researcher</p>
+                    <p style="margin-bottom: 0px; font-size: 7px; text-align: center; color: rgba(255,255,255,0.7);">UW-Stout</p>
                   </div>
 
                 </div>
@@ -272,7 +326,7 @@
         <div class="content">
           <div class="columns is-vcentered">
             <div class="column is-full">
-              <h2 class="title is-2" style="color: #2c3e50; margin-bottom: 1.5rem;">About CogBench</h2>
+              <h2 class="title is-3" style="color: #2c3e50; margin-bottom: 1.5rem;">About CogBench</h2>
               <p class="subtitle is-5" style="color: #34495e; line-height: 1.8;">
                 CogBench is a research initiative that bridges cognitive science and artificial intelligence. We conduct empirical studies comparing the cognitive abilities of large language models with human cognition across multiple domains including executive functioning, working memory, temporal reasoning, and narrative comprehension.
               </p>
@@ -294,7 +348,7 @@
       <section class="section hero is-small left-aligned">
         <div class="container is-max-desktop">
           <div class="content">
-            <h2 class="title is-2" style="text-align: center; margin-bottom: 3rem;">Publications</h2>
+            <h2 class="title is-3" style="text-align: center; margin-bottom: 3rem;">Publications</h2>
             
             <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
               
@@ -403,7 +457,7 @@
     <section class="section hero is-small" style="background: #f5f7fa; padding: 3rem 1.5rem;">
       <div class="container is-max-desktop">
         <div class="content">
-          <h2 class="title is-2" style="text-align: center; color: #2c3e50; margin-bottom: 2rem;">Research Objectives & Key Findings</h2>
+          <h2 class="title is-3" style="text-align: center; color: #2c3e50; margin-bottom: 2rem;">Research Objectives & Key Findings</h2>
             
             <div class="columns is-multiline">
               <div class="column is-full">
@@ -488,13 +542,13 @@
       <div class="columns is-centered">
         <div class="column is-full">
           <div class="content">
-            <h2 class="title is-2" style="text-align: center; color: #2c3e50; margin-bottom: 1rem;">Research Highlights</h2>
+            <h2 class="title is-3" style="text-align: center; color: #2c3e50; margin-bottom: 1rem;">Research Highlights</h2>
             <p style="text-align: center; color: #666; margin-bottom: 2rem; font-size: 1.05rem;">
               We conduct empirical studies across multiple cognitive domains to understand how LLMs compare to human cognition. Scroll through our experimental settings below:
             </p>
 
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
+      <div id="results-carousel" class="research-highlights-slider">
+       <div class="slide">
         <!-- Your image here -->
         <img src="static/images/im1.png" alt="Wisconsin Card Sorting Test"/>
         <div style="padding: 20px; background: white; border-top: 3px solid #667eea;">
@@ -506,7 +560,7 @@
         </div>
       </div>
       
-      <div class="item">
+      <div class="slide">
         <!-- Your image here -->
         <img src="static/images/im2.png" alt="Working Memory Span"/>
         <div style="padding: 20px; background: white; border-top: 3px solid #764ba2;">
@@ -518,9 +572,9 @@
         </div>
       </div>
       
-      <div class="item">
+      <div class="slide">
         <!-- Your image here -->
-        <img src="static/images/im3.png" alt="Temporal Comprehension"/>
+        <img src="static/images/im3.png"  height="300" alt="Temporal Comprehension"/>
         <div style="padding: 20px; background: white; border-top: 3px solid #20b2aa;">
           <h5 class="title is-5" style="color: #20b2aa; margin-bottom: 0.5rem;">Temporal Reasoning & Pragmatics</h5>
           <p style="color: #555; margin-bottom: 1rem; line-height: 1.6;">
@@ -530,9 +584,9 @@
         </div>
      </div>
 
-      <div class="item">
+      <div class="slide">
         <!-- Your image here -->
-        <img src="static/images/im4.png" alt="Narrative Coherence"/>
+        <img src="static/images/im4.png" height="300" alt="Narrative Coherence"/>
         <div style="padding: 20px; background: white; border-top: 3px solid #f08080;">
           <h5 class="title is-5" style="color: #f08080; margin-bottom: 0.5rem;">Narrative Coherence Detection</h5>
           <p style="color: #555; margin-bottom: 1rem; line-height: 1.6;">
@@ -579,6 +633,20 @@
       </div>
     </section>
     <!-- Data type end -->
+
+    <!-- Interested in Joining Section -->
+    <section class="section hero is-small" style="background: white; padding: 3rem 1.5rem;">
+      <div class="container is-max-desktop">
+        <div class="content">
+          <div style="padding: 2rem; background: #e8f5e9; border-radius: 8px; border-left: 4px solid #4caf50;">
+            <h4 class="title is-5" style="color: #2e7d32; margin-bottom: 1rem;">🤝 Interested in Joining?</h4>
+            <p style="line-height: 1.6;">We are always looking for passionate researchers and students interested in cognitive science and AI. If you'd like to collaborate with us, please reach out!</p>
+            <p style="margin-top: 1rem; line-height: 1.6;"><strong>Contact:</strong> Karin de Langis (dento019 [AT] umn.edu) or Dongyeop Kang (dongyeop [AT] umn.edu)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Interested in Joining Section End -->
 
 
 
@@ -637,16 +705,16 @@
     <section class="section hero is-small" style="background: white; padding: 3rem 1.5rem;">
       <div class="container is-max-desktop">
         <div class="content">
-          <h2 class="title is-2" style="color: #2c3e50; text-align: center; margin-bottom: 2rem;">Funding & Support</h2>
+          <h2 class="title is-3" style="color: #2c3e50; text-align: center; margin-bottom: 2rem;">Funding & Support</h2>
           
           <p style="text-align: center; font-size: 1.1rem; margin-bottom: 3rem; color: #555;">
             This research is made possible through the generous support of our funding partners and institutions:
           </p>
 
-          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 3rem; align-items: center;">
+          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(1.5rem, 4vw, 3rem); align-items: center;">
             <!-- Grammarly -->
             <div style="display: flex; align-items: center; justify-content: center; flex: 0 1 auto;">
-              <img src="https://static-web.grammarly.com/1e6ajr2k4140/59BCuroQxv6HsFY1t0LYx6/964f8dd29e89eb079a2737f7e7254c11/Frame_31613445.png" alt="Grammarly" style="max-height: 80px; max-width: 180px; object-fit: contain;">
+              <img src="https://static-web.grammarly.com/1e6ajr2k4140/59BCuroQxv6HsFY1t0LYx6/964f8dd29e89eb079a2737f7e7254c11/Frame_31613445.png" alt="Grammarly" style="max-height: 140px; max-width: 220px; object-fit: contain;">
             </div>
             <!-- Open Philanthropy -->
             <div style="display: flex; align-items: center; justify-content: center; flex: 0 1 auto;">
@@ -699,20 +767,6 @@
       loadTakeaway();
 
     </script>
-
-    <!-- Interested in Joining Section -->
-    <section class="section hero is-small" style="background: white; padding: 3rem 1.5rem;">
-      <div class="container is-max-desktop">
-        <div class="content">
-          <div style="padding: 2rem; background: #e8f5e9; border-radius: 8px; border-left: 4px solid #4caf50;">
-            <h4 class="title is-5" style="color: #2e7d32; margin-bottom: 1rem;">🤝 Interested in Joining?</h4>
-            <p style="line-height: 1.6;">We are always looking for passionate researchers and students interested in cognitive science and AI. If you'd like to collaborate with us, please reach out!</p>
-            <p style="margin-top: 1rem; line-height: 1.6;"><strong>Contact:</strong> Karin de Langis (dento019 [AT] umn.edu) or Dongyeop Kang (dongyeop [AT] umn.edu)</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Interested in Joining Section End -->
 
     <!-- BibTeX Citations -->
     <section class="section" style="background: #f9f9f9; padding: 3rem 1.5rem;">
@@ -769,7 +823,7 @@
           <div class="column is-8">
             <div class="content">
               <p>
-                Copyright @2024 <a href="https://minnesotanlp.github.io/">Minnesota NLP</a> group</a>
+                Copyright @2025 <a href="https://minnesotanlp.github.io/">Minnesota NLP</a> group</a>
               </p>
             </div>
           </div>

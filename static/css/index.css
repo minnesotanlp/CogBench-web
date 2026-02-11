@@ -240,4 +240,117 @@ a {
   }
 }
 
+/* Slick Carousel Custom Styling */
+.research-highlights-slider {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 80px;
+  position: relative;
+}
+
+.research-highlights-slider .slide {
+  display: flex !important;
+  flex-direction: column;
+  outline: none;
+}
+
+.research-highlights-slider .slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.research-highlights-slider .slide > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Slick dots (indicators) styling */
+.research-highlights-slider .slick-dots {
+  bottom: -45px;
+  padding: 20px 0 0 0;
+}
+
+.research-highlights-slider .slick-dots li {
+  margin: 0 8px;
+}
+
+.research-highlights-slider .slick-dots li button:before {
+  font-size: 12px;
+  color: #999;
+}
+
+.research-highlights-slider .slick-dots li.slick-active button:before {
+  color: #667eea;
+}
+
+/* Slick arrow buttons styling */
+.research-highlights-slider .slick-prev,
+.research-highlights-slider .slick-next {
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(102, 126, 234, 0.8);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block !important;
+  position: absolute;
+}
+
+.research-highlights-slider .slick-prev:hover,
+.research-highlights-slider .slick-next:hover {
+  background-color: rgba(102, 126, 234, 1);
+}
+
+.research-highlights-slider .slick-prev:before,
+.research-highlights-slider .slick-next:before {
+  color: white;
+  font-size: 20px;
+}
+
+.research-highlights-slider .slick-prev {
+  left: 10px;
+}
+
+.research-highlights-slider .slick-next {
+  right: 10px;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .research-highlights-slider {
+    padding: 20px 50px;
+  }
+  
+  .research-highlights-slider .slick-prev,
+  .research-highlights-slider .slick-next {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .research-highlights-slider .slick-prev {
+    left: 5px;
+  }
+  
+  .research-highlights-slider .slick-next {
+    right: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .research-highlights-slider .slick-prev,
+  .research-highlights-slider .slick-next {
+    width: 30px;
+    height: 30px;
+    opacity: 0.8;
+  }
+  
+  .research-highlights-slider .slick-prev:before,
+  .research-highlights-slider .slick-next:before {
+    font-size: 16px;
+  }
+}
+
 
